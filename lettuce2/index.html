@@ -13,7 +13,9 @@
    rel="stylesheet"
    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
    />
-    
+   <link rel="shortcut icon" type="image/x-icon" href="48x48.png"/>
+
+
 
 
 </head>
@@ -32,41 +34,43 @@
             </div>
          </div>
       </aside>
-
-      <header>
-         <div class="header-top mobile-hide">
-            <div class="container">
-               <div class="wrapper flexitem">
-                  <div class="left">
-                     <ul class="flexitem main-links">
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Featured Products</a></li>
-                        <li><a href="#">Wishlist</a></li>
-                     </ul>
-                  </div>
-                  <div class="right">
-                     <ul class="flexitem main-links">
-                        <li><a href="#">Sign Up</a></li>
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">Order Tracking</a></li>
-                        <li><a href="#">USD <span class="icon-small"><i class="ri-arrow-down-s-line"></i></span></a>
-                           <ul>
-                              <li class="current"><a href="#">USD</a></li>
-                              <li><a href="#">EURO</a></li>
-                           </ul>
-                        </li>
-                        <li><a href="#">English <span class="icon-small"><i class="ri-arrow-down-s-line"></i></span></a>
-                           <ul>
-                              <li class="current"><a href="#">English</a></li>
-                              <li><a href="#">Spanish</a></li>
-                              </ul>
-                           </li>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
+<header>
+   
+      <div class="top-part">
+        <div class="wrapper flexitem top-list">
+          
+          <a href="account.html">My Account</a>
+          <a href="#footer">Contact</a>
+          <button onclick="toggleModal()" class="login-button">Log in</button>
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close" onclick="toggleModal()">&times;</span>
+              <div class="login-form">
+               <h1>Log in</h1> 
+               <hr>
+               <form action="#" method="post"> 
+                  <label for="email">Email:</label> 
+                  <input class="email-pd" type="email" name="email" 
+                        placeholder="Email Address" 
+                        required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"> 
+                  <br> 
+                  <br> 
+                  <label for="password">Password:</label> 
+                  <input class="pass-pd" type="password" name="password" 
+                        placeholder="Password" required> 
+                  <br> 
+                  <br> 
+                  <input class="submit-button" type="submit" value="Login"> 
+            </form> 
+            <p>New to Lettuce Know?<span><a class="sign-up-link" href="#"> Sign up!</a></span></p>
          </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+  
 
          <!--Top Header-->
          <div class="header-nav">
@@ -77,7 +81,7 @@
                      <div class="logo"><a href="/"><img class="lettuce-know" src="./logo.png"></a></div>
                      <nav class="mobile-hide">
                         <ul class="flexitem second-links">
-                           <li><a href="#">Home</a></li>
+                           <li><a href="">Home</a></li>
                            <li><a href="#">Shop</a></li>
                            <li class="has-child">
                               <a href="#">Women
@@ -94,8 +98,7 @@
                                                 <li><a href="#">Top & Tees</a></li>
                                                 <li><a href="#">Jacket & Coats</a></li>
                                                 <li><a href="#">Pants</a></li>
-                                                <li><a href="#">Sweaters</a></li>
-                                                <li><a href="#">Costumes</a></li>
+                                                <li><a href="#">Sweaters</a></li>               
                                                 <li><a href="#">Hoodies & Sweatshirts</a></li>
                                                 <li><a href="#">Pajamas & Robes</a></li>
                                                 <li><a href="#">Shorts</a></li>
@@ -114,7 +117,6 @@
                                                 <li><a href="#">Rings</a></li>
                                                 <li><a href="#">Earrings</a></li>
                                                 <li><a href="#">Bracelets</a></li>
-                                                <li><a href="#">Body Jewelery</a></li>
                                              </ul>
                                           </div>
                                        </div>
@@ -126,28 +128,8 @@
                                                 <li><a href="#">Makeup & Cosmetics</a></li>
                                                 <li><a href="#">Skin Care</a></li>
                                                 <li><a href="#">Hair Care</a></li>
-                                                <li><a href="#">Essential Oils</a></li>
                                                 <li><a href="#">Fragrances</a></li>
-                                                <li><a href="#">Soaps & Bath Bombs</a></li>
-                                                <li><a href="#">Face Masks & Coverings</a></li>
-                                                <li><a href="#">Spa Kits & Gifts</a></li>
                                              </ul>
-                                          </div>
-                                       </div>
-                                       <div class="flexcol">
-                                          <div class="row">
-                                             <h4>Top Brands</h4>
-                                             <ul class="women-brands">
-                                                <li><a href="#">Nike</a></li>
-                                                <li><a href="#">Louis Vuitton</a></li>
-                                                <li><a href="#">Hermes</a></li>
-                                                <li><a href="#">Gucci</a></li>
-                                                <li><a href="#">Zara</a></li>
-                                                <li><a href="#">H&M</a></li>
-                                                <li><a href="#">Chanel</a></li>
-                                                <li><a href="#">Cartier</a></li>
-                                             </ul>
-                                             <a href="#" class="view-all">View all brands <i class="ri-arrow-right-line"></i></a>
                                           </div>
                                        </div>
                                        <div class="flexcol products">
@@ -170,19 +152,14 @@
                               </div>
                            </li>
                            <li><a href="#">Men</a></li>
-                           <li>
-                              <a href="#">Sports
-                                 <div class="fly-item"><span>New!</span></div>
-                              </a>
-                           </li>
                         </ul>
                      </nav>
                   </div>
-                  <div class="right">
+                  <div class="right header-right">
                      <ul class="flexitem second-links">
-                        <li class="mobile-hide"><a href="#">
-                           <div class="icon-large"><i class="ri-heart-line"></i></div>
-                           <div class="fly-item"><span class="item-number">0</span></div>
+                        <li class="mobile-hide heart-symbol">
+                           <a href="#">
+                           <div class="icon-large heart-symbol"><i class="ri-heart-line"></i></div>
                         </a></li>
                         <li><a href="#" class="iscart">
                            <div class="icon-large">
@@ -205,7 +182,7 @@
 
          <div class="header-main mobile-hide">
             <div class="container">
-               <div class="wrapper flexitem">
+               <div class="wrapper flexitem" id="header-main">
                   <div class="left">
                      <div class="dpt-cat">
                         <div class="dpt-head">
@@ -273,30 +250,6 @@
                                     Men's Fashion
                                  </a>
                               </li>
-                              <li>
-                                 <a href="#">
-                                    <div class="icon-large"><i class="ri-t-shirt-air-line"></i></div>
-                                    Men's Fashion
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#">
-                                    <div class="icon-large"><i class="ri-user-5-line"></i></div>
-                                    Girl's Fashion
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#">
-                                    <div class="icon-large"><i class="ri-user-6-line"></i></div>
-                                    Boy's Fashion
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#">
-                                    <div class="icon-large"><i class="ri-heart-pulse-line"></i></div>
-                                    Health & Household
-                                 </a>
-                              </li>
                               <li class="has-child homekit">
                                  <a href="#">
                                     <div class="icon-large"><i class="ri-home-8-line"></i></div>
@@ -315,14 +268,6 @@
                                              <li><a href="#">Breakfast Nook</a></li>
                                           </ul>
                                        </div>
-                                       <div class="row">
-                                          <h4><a href="#">Living</a></h4>
-                                          <ul>
-                                             <li><a href="#">Living Room</a></li>
-                                             <li><a href="#">Family Room</a></li>
-                                             <li><a href="#">Sunroom</a></li>
-                                          </ul>
-                                       </div>
                                     </div>
                                     <div class="flexcol">
                                        <div class="row">
@@ -332,7 +277,6 @@
                                              <li><a href="#">Powder Room</a></li>
                                              <li><a href="#">Bedroom</a></li>
                                              <li><a href="#">Storage & Closet</a></li>
-                                             <li><a href="#">Baby & Kids</a></li>
                                           </ul>
                                        </div>
                                        <div class="row">
@@ -363,18 +307,6 @@
                                        </div>
                                     </div>
                                  </div>
-                              </li>
-                              <li>
-                                 <a href="#">
-                                    <div class="icon-large"><i class="ri-android-line"></i></div>
-                                    Pet Supplies
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#">
-                                    <div class="icon-large"><i class="ri-basketball-line"></i></div>
-                                    Sports
-                                 </a>
                               </li>
                               <li>
                                  <a href="#">
@@ -462,21 +394,417 @@
             </div>
          </div>
 
-         <div class="brands">
+         <!--Trending Product-->
+         <div class="trending">
             <div class="container">
-               <div class="wrapper flexitem">
-                  <div class="item">
-                     <a href="#">
-                        <img src="" alt="">
-                     </a>
+               <div class="wrapper">
+                  <div class="sectop flexitem">
+                     <h2><span class="circle"></span><span>Trending Products</span></h2>
                   </div>
-               </div>
-            </div>
-         </div>
+                  <div class="column">
+                     <div class="flexwrap">
+                        <div class="row products big">
+                           <div class="item">
+                              <div class="offer">
+                                 <p>Offer ends at</p>
+                                    <div class="countdown">
+                                      <div>
+                                          <p id="days">00</p>
+                                          <span>Days</span>
+                                       </div>
+                                       <div>
+                                          <p id="hours">00</p>
+                                          <span>Hours</span>
+                                       </div>
+                                       <div>
+                                          <p id="minutes">00</p>
+                                          <span>Minutes</span>
+                                       </div>
+                                       <div>
+                                          <p id="seconds">00</p>
+                                          <span>Seconds</span>
+                                       </div>
+                                    </div>
+                              </div>
+                              <div class="media">
+                                 <div class="image">
+                                    <a href="./items.html">
+                                       <img src="assets/products/apparel4.jpg">
+                                    </a>
+                                 </div>
+                                 <div class="hoverable">
+                                    <ul>
+                                       <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                                       <li><a href=""><i class="ri-eye-line"></i></a></li>
+                                       <li><a href=""><i class="ri-shuffle-line"></i></a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="discount circle flexcenter"><span>31%</span></div>
+                              </div>
+                              <div class="content">
+                                 <div class="rating">
+                                    <div class="stars"></div>
+                                    <span class="mini-text">(2,548)</span>
+                                 </div>
+                                 <h3 class="main-links"><a href="#">Happy Sailed Womens Summer Boho Floral</a></h3>
+                                 <div class="price">
+                                    <span class="current">$129.99</span>
+                                    <span class="normal mini-text">$189.98</span>
+                                 </div>
+                                 <div class="stock mini-text">
+                                    <div class="qty">
+                                       <span>Stock: <strong class="qty-available">107</strong></span>
+                                       <span>Sold: <strong class="qty-sold">3,459</strong></span>
+                                    </div>
+                                    <div class="bar">
+                                       <div class="available"></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row products mini">
+                           <div class="item">
+                              <div class="media">
+                                 <div class="thumbnail object-cover">
+                                    <a href="#">
+                                       <img src="assets/products/apparel3.jpg">
+                                    </a>
+                                 </div>
+                                 <div class="hoverable">
+                                    <ul>
+                                       <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="discount circle flexcenter"><span>32%</span></div>
+                              </div>
+                              <div class="content">
+                                 <h3 class="main-links"><a href="#">Black Women's Coat Dress</a></h3>
+                                 <div class="rating">
+                                    <div class="stars"></div>
+                                    <span class="mini-text">(2,548)</span>
+                                 </div>
+                                 <div class="price">
+                                    <span class="current">$129.99</span>
+                                    <span class="normal mini-text">$189.98</span>
+                                 </div>
+                                 <div class="mini-text">
+                                    <p>2975 sold</p>
+                                    <p>Free Shipping</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="media">
+                                 <div class="thumbnail object-cover">
+                                    <a href="#">
+                                       <img src="assets/products/apparel1.jpg">
+                                    </a>
+                                 </div>
+                                 <div class="hoverable">
+                                    <ul>
+                                       <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="discount circle flexcenter"><span>25%</span></div>
+                              </div>
+                              <div class="content">
+                                 <h3 class="main-links"><a href="#">Under Armour Men's Tech</a></h3>
+                                 <div class="rating">
+                                    <div class="stars"></div>
+                                    <span class="mini-text">(2,548)</span>
+                                 </div>
+                                 <div class="price">
+                                    <span class="current">$56.50</span>
+                                    <span class="normal mini-text">$75.50</span>
+                                 </div>
+                                 <div class="mini-text">
+                                    <p>2584 sold</p>
+                                    <p>Free Shipping</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="media">
+                                 <div class="thumbnail object-cover">
+                                    <a href="#">
+                                       <img src="assets/products/home1.jpg">
+                                    </a>
+                                 </div>
+                                 <div class="hoverable">
+                                    <ul>
+                                       <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="discount circle flexcenter"><span>37%</span></div>
+                              </div>
+                              <div class="content">
+                                 <h3 class="main-links"><a href="#">Vonanda Velvet Sofa Couch</a></h3>
+                                 <div class="rating">
+                                    <div class="stars"></div>
+                                    <span class="mini-text">(1,411)</span>
+                                 </div>
+                                 <div class="price">
+                                    <span class="current">$469.99</span>
+                                    <span class="normal mini-text">$755.99</span>
+                                 </div>
+                                 <div class="mini-text">
+                                    <p>2975 sold</p>
+                                    <p>Free Shipping</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="media">
+                                 <div class="thumbnail object-cover">
+                                    <a href="#">
+                                       <img src="assets/products/electronic3.jpg">
+                                    </a>
+                                 </div>
+                                 <div class="hoverable">
+                                    <ul>
+                                       <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="discount circle flexcenter"><span>20%</span></div>
+                              </div>
+                              <div class="content">
+                                 <h3 class="main-links"><a href="#">Wireless Headphones</a></h3>
+                                 <div class="rating">
+                                    <div class="stars"></div>
+                                    <span class="mini-text">(1,559)</span>
+                                 </div>
+                                 <div class="price">
+                                    <span class="current">$99.98</span>
+                                    <span class="normal mini-text">$125.98</span>
+                                 </div>
+                                 <div class="mini-text">
+                                    <p>1843 sold</p>
+                                    <p>Free Shipping</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row products mini">
+                           <div class="item">
+                              <div class="media">
+                                 <div class="thumbnail object-cover">
+                                    <a href="#">
+                                       <img src="assets/products/shoe1.jpg">
+                                    </a>
+                                 </div>
+                                 <div class="hoverable">
+                                    <ul>
+                                       <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="discount circle flexcenter"><span>32%</span></div>
+                              </div>
+                              <div class="content">
+                                 <h3 class="main-links"><a href="#">Men Slip On Shoes Casual</a></h3>
+                                 <div class="rating">
+                                    <div class="stars"></div>
+                                    <span class="mini-text">(1,548)</span>
+                                 </div>
+                                 <div class="price">
+                                    <span class="current">$129.99</span>
+                                    <span class="normal mini-text">$189.98</span>
+                                 </div>
+                                 <div class="mini-text">
+                                    <p>2975 sold</p>
+                                    <p>Free Shipping</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="media">
+                                 <div class="thumbnail object-cover">
+                                    <a href="#">
+                                       <img src="assets/products/apparel2.jpg">
+                                    </a>
+                                 </div>
+                                 <div class="hoverable">
+                                    <ul>
+                                       <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="discount circle flexcenter"><span>17%</span></div>
+                              </div>
+                              <div class="content">
+                                 <h3 class="main-links"><a href="#">Women's Lightweight Knit Sweater</a></h3>
+                                 <div class="rating">
+                                    <div class="stars"></div>
+                                    <span class="mini-text">(948)</span>
+                                 </div>
+                                 <div class="price">
+                                    <span class="current">$37.50</span>
+                                    <span class="normal mini-text">$45.50</span>
+                                 </div>
+                                 <div class="mini-text">
+                                    <p>1257 sold</p>
+                                    <p>Free Shipping</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="media">
+                                 <div class="thumbnail object-cover">
+                                    <a href="#">
+                                       <img src="assets/products/home2.jpg">
+                                    </a>
+                                 </div>
+                                 <div class="hoverable">
+                                    <ul>
+                                       <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="discount circle flexcenter"><span>44%</span></div>
+                              </div>
+                              <div class="content">
+                                 <h3 class="main-links"><a href="#">Dimmable Ceiling Light Modern</a></h3>
+                                 <div class="rating">
+                                    <div class="stars"></div>
+                                    <span class="mini-text">(543)</span>
+                                 </div>
+                                 <div class="price">
+                                    <span class="current">$279.99</span>
+                                    <span class="normal mini-text">$499.99</span>
+                                 </div>
+                                 <div class="mini-text">
+                                    <p>990 sold</p>
+                                    <p>Free Shipping</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="media">
+                                 <div class="thumbnail object-cover">
+                                    <a href="#">
+                                       <img src="assets/products/home3.jpg">
+                                    </a>
+                                 </div>
+                                 <div class="hoverable">
+                                    <ul>
+                                       <li class="active"><a href="#"><i class="ri-heart-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                       <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="discount circle flexcenter"><span>32%</span></div>
+                              </div>
+                              <div class="content">
+                                 <h3 class="main-links"><a href="#">Men Slip On Shoes Casual</a></h3>
+                                 <div class="rating">
+                                    <div class="stars"></div>
+                                    <span class="mini-text">(748)</span>
+                                 </div>
+                                 <div class="price">
+                                    <span class="current">$129.99</span>
+                                    <span class="normal mini-text">$189.98</span>
+                                 </div>
+                                 <div class="mini-text">
+                                    <p>775 sold</p>
+                                    <p>Free Shipping</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+
+            
+
+
 
       </main>
 
-      <footer></footer>
+         <section id="footer">
+            <footer class="footer">
+              <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+                <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
+              </svg>
+              <div class="footer-content">
+                <div class="footer-content-column">
+                  <div class="footer-logo">
+                    <a class="footer-logo-link" href="#">
+                      <span class="hidden-link-text">LOGO</span>
+                      <img src="logo.png" rel="lettuce know logo">
+                    </a>
+                  </div>
+                  <div class="footer-menu">
+                  </div>
+                </div>
+                <div class="footer-content-column">
+                  <div class="footer-menu">
+                    <h2 class="footer-menu-name"> Company</h2>
+                    <ul id="menu-company" class="footer-menu-list">
+                      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                        <p>Contact email: lettuceknow@gmail.com</p>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                </div>
+                <div class="footer-content-column">
+                  <div class="footer-menu">
+                    <h2 class="footer-menu-name"> Quick Links</h2>
+                    <ul id="menu-quick-links" class="footer-menu-list">
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                        <a target="_blank" rel="noopener noreferrer" href="#">Support Center</a>
+                      </li>
+                      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                        <a href="#">Reviews</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-content-column">
+                  <div class="footer-call-to-action">
+                    <h2 class="footer-call-to-action-title"> Let's Chat</h2>
+                    <p class="footer-call-to-action-description"> Have a support question?</p>
+                    <a class="footer-call-to-action-button button" href="#" target="_self"> Get in Touch </a>
+                  </div>
+                  <div class="footer-call-to-action">
+                    <h2 class="footer-call-to-action-title"> You Call Us</h2>
+                    <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link" href="tel:(201)312-1233" target="_self"> (201) 312-1233</a></p>
+                  </div>
+                </div>
+                <div class="footer-social-links"> <svg class="footer-social-amoeba-svg"  viewBox="0 0 236 54">
+                    <path class="footer-social-amoeba-path" d="M223.06,43.32c-.77-7.2,1.87-28.47-20-32.53C187.78,8,180.41,18,178.32,20.7s-5.63,10.1-4.07,16.7-.13,15.23-4.06,15.91-8.75-2.9-6.89-7S167.41,36,167.15,33a18.93,18.93,0,0,0-2.64-8.53c-3.44-5.5-8-11.19-19.12-11.19a21.64,21.64,0,0,0-18.31,9.18c-2.08,2.7-5.66,9.6-4.07,16.69s.64,14.32-6.11,13.9S108.35,46.5,112,36.54s-1.89-21.24-4-23.94S96.34,0,85.23,0,57.46,8.84,56.49,24.56s6.92,20.79,7,24.59c.07,2.75-6.43,4.16-12.92,2.38s-4-10.75-3.46-12.38c1.85-6.6-2-14-4.08-16.69a21.62,21.62,0,0,0-18.3-9.18C13.62,13.28,9.06,19,5.62,24.47A18.81,18.81,0,0,0,3,33a21.85,21.85,0,0,0,1.58,9.08,16.58,16.58,0,0,1,1.06,5A6.75,6.75,0,0,1,0,54H236C235.47,54,223.83,50.52,223.06,43.32Z"></path>
+                  </svg>
+                  <a class="footer-social-link github" href="https://github.com/dilaragur/LettuceKnow" target="_blank">
+                     <span class="hidden-link-text">Github</span>
+                    <svg class="footer-social-icon-svg" viewBox="0 0 32 32">
+                      <path class="footer-social-icon-path" d="M 16 4 C 9.371094 4 4 9.371094 4 16 C 4 21.300781 7.4375 25.800781 12.207031 27.386719 C 12.808594 27.496094 13.027344 27.128906 13.027344 26.808594 C 13.027344 26.523438 13.015625 25.769531 13.011719 24.769531 C 9.671875 25.492188 8.96875 23.160156 8.96875 23.160156 C 8.421875 21.773438 7.636719 21.402344 7.636719 21.402344 C 6.546875 20.660156 7.71875 20.675781 7.71875 20.675781 C 8.921875 20.761719 9.554688 21.910156 9.554688 21.910156 C 10.625 23.746094 12.363281 23.214844 13.046875 22.910156 C 13.15625 22.132813 13.46875 21.605469 13.808594 21.304688 C 11.144531 21.003906 8.34375 19.972656 8.34375 15.375 C 8.34375 14.0625 8.8125 12.992188 9.578125 12.152344 C 9.457031 11.851563 9.042969 10.628906 9.695313 8.976563 C 9.695313 8.976563 10.703125 8.65625 12.996094 10.207031 C 13.953125 9.941406 14.980469 9.808594 16 9.804688 C 17.019531 9.808594 18.046875 9.941406 19.003906 10.207031 C 21.296875 8.65625 22.300781 8.976563 22.300781 8.976563 C 22.957031 10.628906 22.546875 11.851563 22.421875 12.152344 C 23.191406 12.992188 23.652344 14.0625 23.652344 15.375 C 23.652344 19.984375 20.847656 20.996094 18.175781 21.296875 C 18.605469 21.664063 18.988281 22.398438 18.988281 23.515625 C 18.988281 25.121094 18.976563 26.414063 18.976563 26.808594 C 18.976563 27.128906 19.191406 27.503906 19.800781 27.386719 C 24.566406 25.796875 28 21.300781 28 16 C 28 9.371094 22.628906 4 16 4 Z "></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="footer-copyright">
+                <div class="footer-copyright-wrapper">
+                  <p class="footer-copyright-text">
+                    <a class="footer-copyright-link" href="#" target="_self"> © 2024 | Lettuce Know | All rights reserved. </a>
+                  </p>
+                </div>
+              </div>
+            </footer>
+         </section>
+
 
 
    </div>
